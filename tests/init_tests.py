@@ -52,7 +52,9 @@ def test_reset_graph():
 
 @with_setup(start_with_graph)
 def test_ind_nodes():
-    assert dag.ind_nodes(dag.graph) == ['a']
+    inodes = dag.ind_nodes(dag.graph)
+    print(inodes)
+    assert inodes == set(['d'])
 
 @with_setup(blank_setup)
 def test_topological_sort():
